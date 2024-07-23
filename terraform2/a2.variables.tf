@@ -8,3 +8,8 @@ variable "instance_type" {
   type = string
   default = "t2.micro"
 }
+
+variable "username" {
+  type = list(string)
+  default = [ "sai","mani","ram" ]
+}
