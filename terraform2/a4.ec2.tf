@@ -16,3 +16,8 @@ resource "aws_iam_user" "iamuser" {
   count = 2
   name = "sai-${count.index}"
 }
+
+resource "aws_iam_user" "iamuser" {
+  count = length(var.username)
+  name = var.username[count.index]
+}
