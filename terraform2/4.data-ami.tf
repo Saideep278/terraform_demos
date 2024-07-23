@@ -27,3 +27,14 @@ data "aws_ami" "ubuntu" {
     values = ["x86_64"]
   }
 }
+
+
+#it will query az available by default
+# why we are quering
+# using for each loop we can deploy an instance in those az 
+data "aws_availability_zones" "my_zones" {
+  filter{
+     name = "opt-in-status"
+    values = ["opt-in-not-required"]
+  }
+}
