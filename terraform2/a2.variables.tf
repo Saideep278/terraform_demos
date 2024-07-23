@@ -12,4 +12,5 @@ variable "instance_type" {
 variable "username" {
   type = list(string)
   default = [ "sai","mani","ram" ]
+  #key=value
 }
